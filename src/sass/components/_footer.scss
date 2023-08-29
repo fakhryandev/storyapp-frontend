@@ -1,0 +1,6 @@
+@use '../vendors/' as vendors;
+
+footer {
+    background-color: vendors.$blue-300;
+    color: vendors.$light;
+}

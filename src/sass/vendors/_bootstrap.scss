@@ -1,0 +1,86 @@
+// Using built-in modules
+@use 'sass:map';
+
+// Custom
+@use '../vendors-custom/bootstrap/components/button' as btn;
+@use '../vendors-custom/bootstrap/components/navbar' as navbar;
+@use '../vendors-custom/bootstrap/components/modals' as modals;
+@use '../vendors-custom/bootstrap/components/card' as card;
+@use '../vendors-custom/bootstrap/components/close' as close;
+
+// ==================================================
+// Bootstrap
+// ==================================================
+
+//
+// Functions Bootstrap
+//
+@import '~bootstrap/scss/functions';
+
+//
+// Variables Bootstrap
+//
+@import '~bootstrap/scss/variables';
+@import '~bootstrap/scss/variables-dark';
+
+
+// Menerapkan/override variables Bootstrap apa pun di sini
+//
+$dark-blue: #3D56B2;
+$blue-300: #5C7AEA;
+
+$primary: $dark-blue;
+
+$theme-colors: map.set($theme-colors, 'primary', $primary);
+
+// Button
+$btn-padding-x: btn.$padding-x;
+$btn-padding-y: btn.$padding-y;
+
+// Navbar
+$navbar-brand-font-size: navbar.$brand-font-size;
+
+// Modal
+$modal-content-border-color: modals.$content-border-color;
+
+// Card
+$card-cap-padding-y: card.$cap-padding-y;
+
+// Button close
+$btn-close-opacity: close.$opacity;
+$btn-close-hover-opacity: close.$hover-opacity;
+
+// Konfigurasi Bootstrap
+//
+@import '~bootstrap/scss/maps';
+@import '~bootstrap/scss/mixins';
+@import '~bootstrap/scss/root';
+@import '~bootstrap/scss/utilities';
+@import '~bootstrap/scss/reboot';
+
+//
+// Layouts dan components
+//
+@import '~bootstrap/scss/type';
+@import '~bootstrap/scss/images';
+@import '~bootstrap/scss/containers';
+@import '~bootstrap/scss/grid';
+@import '~bootstrap/scss/tables';
+@import '~bootstrap/scss/helpers';
+
+
+// Komponen-Komponen
+@import '~bootstrap/scss/buttons';
+@import '~bootstrap/scss/navbar';
+@import '~bootstrap/scss/nav';
+@import '~bootstrap/scss/card';
+@import '~bootstrap/scss/modal';
+@import '~bootstrap/scss/forms';
+@import '~bootstrap/scss/close';
+@import '~bootstrap/scss/modal';
+
+
+//
+// Utilities API untuk menghasilkan utility classes
+//
+@import '~bootstrap/scss/utilities/api';

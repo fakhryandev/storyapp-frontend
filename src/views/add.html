@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= htmlWebpackPlugin.options.title %></title>
+  </head>
+  <body>
+    <header>
+      <navigation-bar brandName="<%= brandName %>"></navigation-bar>
+    </header>
+    <main>
+      <div class="main-content">
+        <div class="container">
+          <div class="row mt-5 justify-content-between">
+            <div class="col-6">
+              <h1>Share Your Story</h1>
+              <form id="addStoryForm" novalidate>
+                <story-add-form-group></story-add-form-group>
+              </form>
+            </div>
+            <div class="col-5">
+              <story-add-preview></story-add-preview>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <modal-alert></modal-alert>
+
+    <footer>
+      <footer-content></footer-content>
+    </footer>
+  </body>
+</html>
